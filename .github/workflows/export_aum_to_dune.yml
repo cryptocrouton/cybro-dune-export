@@ -19,9 +19,9 @@ jobs:
 
       - name: Run exporter
         env:
-          DUNE_API_URL: ${{ secrets.DUNE_API_URL }}
+          DUNE_API_URL: ${{ vars.DUNE_API_URL }}
           DUNE_API_KEY: ${{ secrets.DUNE_API_KEY }}
-          DUNE_DATASET_ID: ${{ secrets.DUNE_DATASET_ID }}
-          CYBRO_API_URL: ${{ secrets.CYBRO_API_URL }}
+          DUNE_DATASET_ID: ${{ vars.DUNE_DATASET_ID }}
+          CYBRO_API_URL: ${{ vars.CYBRO_API_URL }}
         run: |
           node index.js
